@@ -8,8 +8,10 @@ void Graf::createVertices(int ile)
 {
 	vertexList.clear();
 	wasNodeVisited.clear();
+	wasNodeBacktracked.clear();
 	vertexList.resize(ile);
 	wasNodeVisited.resize(ile,false);
+	wasNodeBacktracked.resize(ile,false);
 }
 
 void Graf::addEdge(int i_Vertex_Index_1, int i_Vertex_Index_2)
@@ -152,4 +154,21 @@ bool Graf::WasNodeVisited(int idx)
 		return false;
 
     return wasNodeVisited[idx];
+}
+
+void Graf::MarkNodeAsBacktracked(int idx)
+{
+	if(!isVertexValid(idx))
+		return;
+
+	wasNodeBacktracked[idx] = true;
+	
+}
+
+bool Graf::WasNodeBacktracked(int idx)
+{
+	if(!isVertexValid(idx))
+		return false;
+
+    return wasNodeBacktracked[idx];
 }

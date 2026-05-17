@@ -11,6 +11,7 @@ class Graf
 {
     std::vector<std::vector<edge>> vertexList;
     std::vector<bool> wasNodeVisited;
+    std::vector<bool> wasNodeBacktracked;
 
 public:
     Graf();
@@ -26,5 +27,7 @@ public:
     bool isVertexValid(int idx);
     void MarkNodeAsVisited(int idx);
     bool WasNodeVisited(int idx);
+    void MarkNodeAsBacktracked(int idx);
+    bool WasNodeBacktracked(int idx);
 };
 

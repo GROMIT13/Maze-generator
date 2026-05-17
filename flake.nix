@@ -31,7 +31,7 @@
           ];
 
           shellHook = ''
-            export LD_LIBRARY_PATH="{pkgs.lib.makeLibraryPath [ pkgs.libGL pkgs.xorg.libX11 ]}:$LD_LIBRARY_PATH"
+            export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath [ pkgs.libGL pkgs.xorg.libX11 ]}:$LD_LIBRARY_PATH"
             echo "Maze-generator ready to run and develop."
             echo "To compile the project run 'cmake -B build && cmake --build build'"
           '';
