@@ -7,8 +7,20 @@ int main(int argn, char** argv)
 {
     srand(time(NULL));
 
-    int width = atoi(argv[1]);
-    int height = atoi(argv[2]);
+    int width;
+    int height;
+
+    if(argn == 1)
+    {
+        width = 10;
+        height = 10;
+    }
+
+    if(argn == 3)
+    {
+        width = atoi(argv[1]);
+        height = atoi(argv[2]);
+    }
     
     const int screenWidth = 800;
     const int screenHeight = 450;
