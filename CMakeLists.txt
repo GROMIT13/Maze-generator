@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 
 set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
 
-project(RaylibProject LANGUAGES CXX)
+project(Maze-generator LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -25,7 +25,7 @@ file(GLOB_RECURSE HEADERS "include/*.hpp")
 
 #find_package(raylib REQUIRED)
 
-add_executable(labirynth ${SOURCES} ${HEADERS})
+add_executable(Maze-generator ${SOURCES} ${HEADERS})
 
-target_link_libraries(labirynth PRIVATE raylib)
-target_include_directories(labirynth PRIVATE include)
+target_link_libraries(Maze-generator PRIVATE raylib)
+target_include_directories(Maze-generator PRIVATE include)
